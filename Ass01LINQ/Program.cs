@@ -15,6 +15,11 @@ namespace Ass01LINQ
             #region Q02
             //var result = ProductList.Select(s => new { name = s.ProductName });
             #endregion
+            #region Q03
+            // Sort all products by UnitPrice (ascending). Print each product's name and price. 
+            //var result = ProductList.OrderBy(o => o.UnitPrice)
+            //    .Select(s => new { name = s.ProductName, price = s.UnitPrice});
+            #endregion
             foreach (var item in result) 
             {
                 Console.WriteLine(item);
