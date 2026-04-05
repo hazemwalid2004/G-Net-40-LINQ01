@@ -2,6 +2,7 @@
 using System.Numerics;
 using static Session01LinqG01.DataSources.Source;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Session01LinqG01.Helper;
 namespace Ass01LINQ
 {
     internal class Program
@@ -62,7 +63,12 @@ namespace Ass01LINQ
             #endregion
             #region Q11
             //Show position number alongside ProductName
-            var result = ProductList.Select((s, i) => $"{i + 1}.{s.ProductName}");
+            //var result = ProductList.Select((s, i) => $"{i + 1}.{s.ProductName}");
+            #endregion
+            #region Q12
+            //Sort first by-word length and then by a case -insensitive sort of the words in an array.
+            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var result = Arr.OrderBy(s=>s.Length).ThenBy(s=>s,new StringCaseInsensitiveComparer());
             #endregion
             foreach (var item in result) 
             {
