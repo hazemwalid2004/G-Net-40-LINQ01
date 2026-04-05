@@ -1,8 +1,10 @@
-﻿using Session01LinqG01.Models;
+﻿using Session01LinqG01.Helper;
+using Session01LinqG01.Models;
+using System;
+using System.Diagnostics.Metrics;
 using System.Numerics;
 using static Session01LinqG01.DataSources.Source;
 using static System.Runtime.InteropServices.JavaScript.JSType;
-using Session01LinqG01.Helper;
 namespace Ass01LINQ
 {
     internal class Program
@@ -67,13 +69,18 @@ namespace Ass01LINQ
             #endregion
             #region Q12
             //Sort first by-word length and then by a case -insensitive sort of the words in an array.
-            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-            var result = Arr.OrderBy(s=>s.Length).ThenBy(s=>s,new StringCaseInsensitiveComparer());
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var result = Arr.OrderBy(s=>s.Length).ThenBy(s=>s,new StringCaseInsensitiveComparer());
             #endregion
-            foreach (var item in result) 
-            {
-                Console.WriteLine(item);
-            }
+            #region Q13
+            //string[] arr = { "one", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+            //var result = arr.Where(s => s[1] == 'i').Reverse();
+
+            #endregion
+            //foreach (var item in result) 
+            //{
+            //    Console.WriteLine(item);
+            //}
         }
 
     }
