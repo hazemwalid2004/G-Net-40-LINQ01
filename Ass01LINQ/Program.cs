@@ -8,9 +8,12 @@ namespace Ass01LINQ
         {
             //Console.WriteLine("Hello, World!");
             #region Q01
-            // Get all products from the "Seafood" category. Print each product's name and price.
-            var result = ProductList.Where(c => c.Category == "Seafood")
-                .Select(s=>new {name=s.ProductName,price=s.UnitPrice});
+            //// Get all products from the "Seafood" category. Print each product's name and price.
+            //var result = ProductList.Where(c => c.Category == "Seafood")
+            //    .Select(s=>new {name=s.ProductName,price=s.UnitPrice});
+            #endregion
+            #region Q02
+            //var result = ProductList.Select(s => new { name = s.ProductName });
             #endregion
             foreach (var item in result) 
             {
