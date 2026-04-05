@@ -1,4 +1,5 @@
 ﻿using Session01LinqG01.Models;
+using System.Numerics;
 using static Session01LinqG01.DataSources.Source;
 namespace Ass01LINQ
 {
@@ -49,6 +50,14 @@ namespace Ass01LINQ
             //Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock
             //var result = ProductList.Where(s => s.Category == "Beverages").OrderByDescending(s => s.UnitsInStock)
             //    .Select(s => new { name = s.ProductName, stock = s.UnitsInStock });
+            #endregion
+            #region Q10
+            //Using QUERY SYNTAX with a compound from clause, list all orders placed in 1997 or later showing CustomerID and OrderDate
+            //var result = from c in CustomerList
+            //             from o in c.Orders
+            //             where o.OrderDate.Year >= 1997
+            //             select new { c.CustomerID, o.OrderDate };
+                         
             #endregion
             foreach (var item in result) 
             {
