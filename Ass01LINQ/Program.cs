@@ -1,11 +1,87 @@
-﻿namespace Ass01LINQ
+﻿using Session01LinqG01.Helper;
+using Session01LinqG01.Models;
+using System;
+using System.Diagnostics.Metrics;
+using System.Numerics;
+using static Session01LinqG01.DataSources.Source;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+namespace Ass01LINQ
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello, World!");
+            #region Q01
+            //// Get all products from the "Seafood" category. Print each product's name and price.
+            //var result = ProductList.Where(c => c.Category == "Seafood")
+            //    .Select(s=>new {name=s.ProductName,price=s.UnitPrice});
+            #endregion
+            #region Q02
+            //var result = ProductList.Select(s => new { name = s.ProductName });
+            #endregion
+            #region Q03
+            // Sort all products by UnitPrice (ascending). Print each product's name and price. 
+            //var result = ProductList.OrderBy(o => o.UnitPrice)
+            //    .Select(s => new { name = s.ProductName, price = s.UnitPrice});
+            #endregion
+            #region Q04
+            //Get all products where UnitPrice is between 10 and 30
+            //var result = ProductList.Where(c => c.UnitPrice >= 10 && c.UnitPrice <= 30);
+            #endregion
+            #region Q05
+            // Get all products that are in stock (UnitsInStock > 0) and belong to the "Condiments" category
+            //var result = ProductList.Where(c => c.UnitsInStock > 0 && c.Category == "Condiments");
+            #endregion
+            #region Q06
+            // Create a new anonymous type with three properties
+            //var result = ProductList.Select(s => new
+            //{
+            //    Name = s.ProductName,
+            //    Price = s.UnitPrice,
+            //    StockStatus = s.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            //});
+            #endregion
+            #region Q07
+            // Print each product's name along with its position (1-based) in the list.
+            //var result = ProductList.Select((c, i) => $"{i + 1}. {c.ProductName}");
+            #endregion
+            #region Q08
+            //sort ProductList by Category ascending, then within each category, sort by UnitPrice descending
+            //var result = ProductList.OrderBy(s => s.Category).ThenByDescending(c => c.UnitPrice);
+            #endregion
+            #region Q09
+            //Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock
+            //var result = ProductList.Where(s => s.Category == "Beverages").OrderByDescending(s => s.UnitsInStock)
+            //    .Select(s => new { name = s.ProductName, stock = s.UnitsInStock });
+            #endregion
+            #region Q10
+            //Using QUERY SYNTAX with a compound from clause, list all orders placed in 1997 or later showing CustomerID and OrderDate
+            //var result = from c in CustomerList
+            //             from o in c.Orders
+            //             where o.OrderDate.Year >= 1997
+            //             select new { c.CustomerID, o.OrderDate };
 
+            #endregion
+            #region Q11
+            //Show position number alongside ProductName
+            //var result = ProductList.Select((s, i) => $"{i + 1}.{s.ProductName}");
+            #endregion
+            #region Q12
+            //Sort first by-word length and then by a case -insensitive sort of the words in an array.
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var result = Arr.OrderBy(s=>s.Length).ThenBy(s=>s,new StringCaseInsensitiveComparer());
+            #endregion
+            #region Q13
+            //string[] arr = { "one", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+            //var result = arr.Where(s => s[1] == 'i').Reverse();
+
+            #endregion
+            //foreach (var item in result) 
+            //{
+            //    Console.WriteLine(item);
+            //}
         }
+
     }
 }
