@@ -22,7 +22,11 @@ namespace Ass01LINQ
             #endregion
             #region Q04
             //Get all products where UnitPrice is between 10 and 30
-            var result = ProductList.Where(c => c.UnitPrice >= 10 && c.UnitPrice <= 30);
+            //var result = ProductList.Where(c => c.UnitPrice >= 10 && c.UnitPrice <= 30);
+            #endregion
+            #region Q05
+            // Get all products that are in stock (UnitsInStock > 0) and belong to the "Condiments" category
+            //var result = ProductList.Where(c => c.UnitsInStock > 0 && c.Category == "Condiments");
             #endregion
             foreach (var item in result) 
             {
