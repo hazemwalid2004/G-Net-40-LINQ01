@@ -43,7 +43,12 @@ namespace Ass01LINQ
             #endregion
             #region Q08
             //sort ProductList by Category ascending, then within each category, sort by UnitPrice descending
-            var result = ProductList.OrderBy(s => s.Category).ThenByDescending(c => c.UnitPrice);
+            //var result = ProductList.OrderBy(s => s.Category).ThenByDescending(c => c.UnitPrice);
+            #endregion
+            #region Q09
+            //Get all products from the "Beverages" category, sorted by UnitsInStock descending. Print name and stock
+            //var result = ProductList.Where(s => s.Category == "Beverages").OrderByDescending(s => s.UnitsInStock)
+            //    .Select(s => new { name = s.ProductName, stock = s.UnitsInStock });
             #endregion
             foreach (var item in result) 
             {
