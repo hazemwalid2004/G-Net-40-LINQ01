@@ -28,6 +28,15 @@ namespace Ass01LINQ
             // Get all products that are in stock (UnitsInStock > 0) and belong to the "Condiments" category
             //var result = ProductList.Where(c => c.UnitsInStock > 0 && c.Category == "Condiments");
             #endregion
+            #region Q06
+            // Create a new anonymous type with three properties
+            //var result = ProductList.Select(s => new
+            //{
+            //    Name = s.ProductName,
+            //    Price = s.UnitPrice,
+            //    StockStatus = s.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            //});
+            #endregion
             foreach (var item in result) 
             {
                 Console.WriteLine(item);
