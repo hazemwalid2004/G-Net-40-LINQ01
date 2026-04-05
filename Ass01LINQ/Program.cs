@@ -20,6 +20,10 @@ namespace Ass01LINQ
             //var result = ProductList.OrderBy(o => o.UnitPrice)
             //    .Select(s => new { name = s.ProductName, price = s.UnitPrice});
             #endregion
+            #region Q04
+            //Get all products where UnitPrice is between 10 and 30
+            var result = ProductList.Where(c => c.UnitPrice >= 10 && c.UnitPrice <= 30);
+            #endregion
             foreach (var item in result) 
             {
                 Console.WriteLine(item);
