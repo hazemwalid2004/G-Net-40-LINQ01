@@ -37,6 +37,10 @@ namespace Ass01LINQ
             //    StockStatus = s.UnitsInStock > 0 ? "Available" : "Out of Stock"
             //});
             #endregion
+            #region Q07
+            // Print each product's name along with its position (1-based) in the list.
+            //var result = ProductList.Select((c, i) => $"{i + 1}. {c.ProductName}");
+            #endregion
             foreach (var item in result) 
             {
                 Console.WriteLine(item);
