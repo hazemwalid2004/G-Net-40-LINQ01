@@ -1,6 +1,7 @@
 ﻿using Session01LinqG01.Models;
 using System.Numerics;
 using static Session01LinqG01.DataSources.Source;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Ass01LINQ
 {
     internal class Program
@@ -57,7 +58,11 @@ namespace Ass01LINQ
             //             from o in c.Orders
             //             where o.OrderDate.Year >= 1997
             //             select new { c.CustomerID, o.OrderDate };
-                         
+
+            #endregion
+            #region Q11
+            //Show position number alongside ProductName
+            var result = ProductList.Select((s, i) => $"{i + 1}.{s.ProductName}");
             #endregion
             foreach (var item in result) 
             {
